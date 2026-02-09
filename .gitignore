@@ -1,0 +1,13 @@
+# OpenClaw 配置文件
+AGENTS.md
+BOOTSTRAP.md
+HEARTBEAT.md
+IDENTITY.md
+SOUL.md
+TOOLS.md
+USER.md
+heartbeat-state.json
+memory/
+
+# 只保留小说项目文件
+!修仙小说项目/
