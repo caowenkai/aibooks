@@ -20,6 +20,14 @@
 - `scripts/`：远程执行、后台运行、监督脚本
 - `logs/`：本地记录与运行日志说明
 
+## 当前已沉淀的稳定产物
+
+- `outlines/style_guide_compact.md`
+- `outlines/architect_micro.md`
+- `outlines/volume1_micro.md`
+- `batches/batch01_scene_micro.md`
+- `batches/batch01_chunk01_micro.md`
+
 ## 推荐工作流
 
 1. 先读 `outlines/master_blueprint.md`

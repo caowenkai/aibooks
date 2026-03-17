@@ -14,6 +14,8 @@
 - 已启动第一波后台任务
 - 已确认第一波“大任务并发”方案不稳定
 - 已转入 compact 结构任务模式
+- 已验证 micro 顺跑模式可稳定产出
+- 已拿到首个可用正文微块
 
 ## 远端位置
 
@@ -72,7 +74,7 @@
 - 先生成紧凑结构产物
 - 再用结构产物继续拆正文
 
-## Compact 模式
+## Compact / Micro 模式
 
 ### 新 prompt
 
@@ -94,20 +96,32 @@
   - 输出：`/root/openclaw_xianxia_factory/output_compact/style_compact.json`
   - 日志：`/root/openclaw_xianxia_factory/logs_compact/style_compact.log`
   - 状态：成功返回有效 JSON
+- `architect_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/architect_micro.json`
+  - 状态：成功返回总卖点、世界规则、角色弧线、前三卷卷纲
+- `volume1_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/volume1_micro.json`
+  - 状态：成功返回第一卷概述、4 个批次与 8 个关键场景
+- `batch01_scene_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_scene_micro.json`
+  - 状态：成功返回 Batch 01 的 6 个场景骨架与批次钩子
+- `batch01_chunk01_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk01_micro.json`
+  - 状态：成功返回首个可用正文块与 continuity notes
 
 ### 当前目标
 
-把以下 3 项也稳定产出：
-
-- `architect_compact`
-- `volume1_compact`
-- `batch01_scene_compact`
+继续把正文沿 `Chunk 01B -> Chunk 02 -> Chunk 03` 微块方式向前推进，并把稳定产物持续同步到 GitHub。
 
 ## 已准备好的下一步正文任务
 
 - `batches/batch01_chunk_plan.md`
 - `prompts/batch01_chapter_chunk_template.md`
 - `prompts/batch01_chunk01_prompt.txt`
+- 下一建议：
+  - 新建 `batch01_chunk01b_micro.txt`
+  - 承接 `batch01_chunk01_micro.md` 的 continuity notes
+  - 控制在 1200 到 1600 字
 
 说明：
 
@@ -135,12 +149,9 @@
    - `ps -ef | grep 'openclaw agent' | grep -v grep`
    - `ls -lh /root/openclaw_xianxia_factory/output`
    - `tail -n 40 /root/openclaw_xianxia_factory/logs/*.log`
-4. 查看四个 JSON 输出是否完成
-5. 抽样检查内容质量
-6. 如果首波质量可接受，再启动第二波：
-   - 先基于 compact 产物补全文档
-   - 再拆 `Batch 01` 正文为更小章节块
-   - 然后再推进 `Batch 02`
+4. 先看 `output_compact/` 下 4 个 micro 结果是否还在
+5. 优先基于已沉淀的 Markdown 产物继续写下一个正文微块
+6. 每拿到新的稳定块后运行 GitHub 同步脚本
 
 ## 注意
 
