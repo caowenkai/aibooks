@@ -30,6 +30,8 @@
 - `batches/batch01_chunk01b_micro.md`
 - `batches/batch01_chunk02a_micro.md`
 - `batches/batch01_chunk02b_micro.md`
+- `batches/batch01_chunk03a_micro.md`
+- `batches/batch01_chunk03b_micro.md`
 
 ## 推荐工作流
 

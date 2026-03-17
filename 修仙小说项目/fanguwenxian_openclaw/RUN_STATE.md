@@ -18,6 +18,7 @@
 - 已拿到首个可用正文微块
 - 已拿到首个连续衔接的第二正文微块
 - 已拿到 `Chunk 02A / 02B` 两段连续转移剧情
+- 已拿到 `Chunk 03A / 03B`，剧情推进到废猎棚初次藏身
 
 ## 远端位置
 
@@ -119,6 +120,12 @@
 - `batch01_chunk02b_micro`
   - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk02b_micro.json`
   - 状态：成功写出临时救治、追兵逼近、转往废猎棚的决定
+- `batch01_chunk03a_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk03a_micro.json`
+  - 状态：成功写出离崖、掩痕、进入西岭旧路
+- `batch01_chunk03b_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk03b_micro.json`
+  - 状态：成功写出抵达废猎棚、临时藏匿与外部异动未止
 
 ### 当前目标
 
@@ -132,9 +139,11 @@
 - `prompts/batch01_chunk01b_micro.txt`
 - `prompts/batch01_chunk02a_micro.txt`
 - `prompts/batch01_chunk02b_micro.txt`
+- `prompts/batch01_chunk03a_micro.txt`
+- `prompts/batch01_chunk03b_micro.txt`
 - 下一建议：
-  - 新建 `batch01_chunk03a_micro.txt`
-  - 承接 `batch01_chunk02b_micro.md` 的 continuity notes
+  - 新建 `batch01_chunk04a_micro.txt`
+  - 承接 `batch01_chunk03b_micro.md` 的 continuity notes
   - 控制在 1200 到 1600 字
 
 说明：
