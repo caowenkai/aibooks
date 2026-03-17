@@ -27,6 +27,7 @@
 - `outlines/volume1_micro.md`
 - `batches/batch01_scene_micro.md`
 - `batches/batch01_chunk01_micro.md`
+- `batches/batch01_chunk01b_micro.md`
 
 ## 推荐工作流
 

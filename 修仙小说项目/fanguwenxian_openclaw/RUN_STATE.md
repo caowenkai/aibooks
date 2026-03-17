@@ -16,6 +16,7 @@
 - 已转入 compact 结构任务模式
 - 已验证 micro 顺跑模式可稳定产出
 - 已拿到首个可用正文微块
+- 已拿到首个连续衔接的第二正文微块
 
 ## 远端位置
 
@@ -108,6 +109,9 @@
 - `batch01_chunk01_micro`
   - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk01_micro.json`
   - 状态：成功返回首个可用正文块与 continuity notes
+- `batch01_chunk01b_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk01b_debug.json`
+  - 状态：成功承接上一段，推进到黑风涧闻救
 
 ### 当前目标
 
@@ -118,9 +122,10 @@
 - `batches/batch01_chunk_plan.md`
 - `prompts/batch01_chapter_chunk_template.md`
 - `prompts/batch01_chunk01_prompt.txt`
+- `prompts/batch01_chunk01b_micro.txt`
 - 下一建议：
-  - 新建 `batch01_chunk01b_micro.txt`
-  - 承接 `batch01_chunk01_micro.md` 的 continuity notes
+  - 新建 `batch01_chunk02a_micro.txt`
+  - 承接 `batch01_chunk01b_micro.md` 的 continuity notes
   - 控制在 1200 到 1600 字
 
 说明：
@@ -152,6 +157,14 @@
 4. 先看 `output_compact/` 下 4 个 micro 结果是否还在
 5. 优先基于已沉淀的 Markdown 产物继续写下一个正文微块
 6. 每拿到新的稳定块后运行 GitHub 同步脚本
+
+## 新发现的异常
+
+- `batch01_chunk01b_micro` 首次执行时出现一次空跑：
+  - `raw` 文件为 0 字节
+  - `log` 文件为 0 字节
+  - 无明确报错
+- 同 prompt 在 `bash -x` 诊断执行下成功完成，说明当前环境存在偶发空跑，监督时需要保留“重跑一次”的策略。
 
 ## 注意
 
