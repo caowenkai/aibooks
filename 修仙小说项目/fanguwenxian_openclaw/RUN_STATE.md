@@ -19,6 +19,7 @@
 - 已拿到首个连续衔接的第二正文微块
 - 已拿到 `Chunk 02A / 02B` 两段连续转移剧情
 - 已拿到 `Chunk 03A / 03B`，剧情推进到废猎棚初次藏身
+- 已拿到 `Chunk 04A`，进入棚中止伤与外部搜逼阶段
 
 ## 远端位置
 
@@ -126,6 +127,9 @@
 - `batch01_chunk03b_micro`
   - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk03b_micro.json`
   - 状态：成功写出抵达废猎棚、临时藏匿与外部异动未止
+- `batch01_chunk04a_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk04a_micro.json`
+  - 状态：成功写出棚中止伤、有限问话、白羽追索逼近
 
 ### 当前目标
 
@@ -141,9 +145,12 @@
 - `prompts/batch01_chunk02b_micro.txt`
 - `prompts/batch01_chunk03a_micro.txt`
 - `prompts/batch01_chunk03b_micro.txt`
+- `prompts/batch01_chunk04a_micro.txt`
+- `prompts/batch01_chunk04b_micro.txt`
+- `prompts/batch01_chunk04b_fresh.txt`
 - 下一建议：
-  - 新建 `batch01_chunk04a_micro.txt`
-  - 承接 `batch01_chunk03b_micro.md` 的 continuity notes
+  - 先排查 `Chunk 04B` 三次空跑原因
+  - 若继续正文，优先缩短 prompt 或改为更刚性的结构输出后再回正文
   - 控制在 1200 到 1600 字
 
 说明：
@@ -183,6 +190,11 @@
   - `log` 文件为 0 字节
   - 无明确报错
 - 同 prompt 在 `bash -x` 诊断执行下成功完成，说明当前环境存在偶发空跑，监督时需要保留“重跑一次”的策略。
+- `batch01_chunk04b` 当前出现了更顽固的空跑：
+  - 原 prompt 在 `novel-writer-a` 上空跑
+  - 同 prompt 的 `bash -x` 诊断重跑仍空跑
+  - 改成更自包含的 `batch01_chunk04b_fresh.txt` 并切到 `novel-writer-b` 后仍空跑
+- 这说明当前不仅是会话膨胀问题，也可能存在更底层的 OpenClaw 偶发执行失败；在没有明确日志前，不宜继续无差别重跑同级正文块。
 
 ## 注意
 
