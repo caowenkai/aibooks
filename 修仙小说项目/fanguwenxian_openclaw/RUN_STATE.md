@@ -17,6 +17,7 @@
 - 已验证 micro 顺跑模式可稳定产出
 - 已拿到首个可用正文微块
 - 已拿到首个连续衔接的第二正文微块
+- 已拿到 `Chunk 02A / 02B` 两段连续转移剧情
 
 ## 远端位置
 
@@ -112,6 +113,12 @@
 - `batch01_chunk01b_micro`
   - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk01b_debug.json`
   - 状态：成功承接上一段，推进到黑风涧闻救
+- `batch01_chunk02a_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk02a_micro.json`
+  - 状态：成功写出探查陌客、初显修士祸端
+- `batch01_chunk02b_micro`
+  - 输出：`/root/openclaw_xianxia_factory/output_compact/batch01_chunk02b_micro.json`
+  - 状态：成功写出临时救治、追兵逼近、转往废猎棚的决定
 
 ### 当前目标
 
@@ -123,9 +130,11 @@
 - `prompts/batch01_chapter_chunk_template.md`
 - `prompts/batch01_chunk01_prompt.txt`
 - `prompts/batch01_chunk01b_micro.txt`
+- `prompts/batch01_chunk02a_micro.txt`
+- `prompts/batch01_chunk02b_micro.txt`
 - 下一建议：
-  - 新建 `batch01_chunk02a_micro.txt`
-  - 承接 `batch01_chunk01b_micro.md` 的 continuity notes
+  - 新建 `batch01_chunk03a_micro.txt`
+  - 承接 `batch01_chunk02b_micro.md` 的 continuity notes
   - 控制在 1200 到 1600 字
 
 说明：
