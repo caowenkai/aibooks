@@ -41,3 +41,19 @@
 3. 查看 `batches/batch_manifest.md`
 4. 用 `scripts/` 下脚本启动某一波次
 5. 用日志和 session 监督输出质量
+
+## 自动驾驶
+
+- 队列文件：`autopilot/batch01_queue.tsv`
+- 自动执行器：`scripts/novel_autopilot_remote.sh`
+- 单任务主备执行器：`scripts/run_task_with_fallback_remote.sh`
+- 结果落盘器：`scripts/promote_output_remote.sh`
+- 后台启动器：`scripts/launch_novel_autopilot_bg_remote.sh`
+
+当前自动驾驶策略：
+
+- 按队列顺序执行任务
+- 每个任务先跑主 prompt / 主 agent
+- 失败后自动切换到备选 prompt / 备选 agent
+- 成功后自动把 JSON 提升为项目内 Markdown，并自动同步 GitHub
+- 如果任务持续失败，则保留历史记录并按固定间隔继续重试

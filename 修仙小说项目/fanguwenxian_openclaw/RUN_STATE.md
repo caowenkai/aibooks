@@ -135,6 +135,21 @@
 
 继续把正文沿 `Chunk 01B -> Chunk 02 -> Chunk 03` 微块方式向前推进，并把稳定产物持续同步到 GitHub。
 
+## 自动驾驶状态
+
+- 已新增远端后台自动驾驶脚本：
+  - `scripts/novel_autopilot_remote.sh`
+  - `scripts/run_task_with_fallback_remote.sh`
+  - `scripts/promote_output_remote.sh`
+  - `scripts/launch_novel_autopilot_bg_remote.sh`
+- 已新增自动驾驶队列：
+  - `autopilot/batch01_queue.tsv`
+- 当前设计：
+  - 自动跑队列
+  - 失败时自动切换主备 prompt / agent
+  - 成功时自动生成项目内 Markdown
+  - 自动执行 GitHub 同步
+
 ## 已准备好的下一步正文任务
 
 - `batches/batch01_chunk_plan.md`
@@ -149,8 +164,8 @@
 - `prompts/batch01_chunk04b_micro.txt`
 - `prompts/batch01_chunk04b_fresh.txt`
 - 下一建议：
-  - 先排查 `Chunk 04B` 三次空跑原因
-  - 若继续正文，优先缩短 prompt 或改为更刚性的结构输出后再回正文
+  - 启动自动驾驶，先围绕 `Chunk 04B` 做后台重试
+  - 若继续正文，优先由自动驾驶执行主备 prompt 切换
   - 控制在 1200 到 1600 字
 
 说明：

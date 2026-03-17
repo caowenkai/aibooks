@@ -1,0 +1,2 @@
+task_id	target_md	primary_agent	primary_prompt	fallback_agent	fallback_prompt
+batch01_chunk04b_micro	batches/batch01_chunk04b_micro.md	novel-writer-a	prompts/batch01_chunk04b_micro.txt	novel-writer-b	prompts/batch01_chunk04b_fresh.txt
