@@ -1,11 +1,11 @@
 # Batch 01 本地同步稿
 
-最后同步时间：2026-03-18 15:52 CST
+最后同步时间：2026-03-18 16:15 CST
 
 ## 当前状态
 
-- 已稳定沉淀正文微块至 `batch01_chunk09a_micro`
-- 当前剧情位置：两人已借活坡塌势暂时压退追索，抢到东折林影边缘，继续卯前赶路
+- 已稳定沉淀正文微块至 `batch01_chunk09b_micro`
+- 当前剧情位置：两人已以认路旧语抢进青石涧口半线，外头追索暂被隔在石外
 - 当前链路以本地续写为主，远端自动驾驶状态暂不可核验
 
 ## 正文顺序
@@ -27,10 +27,11 @@
 15. [batch01_chunk08a_micro.md](/Users/icsoc/ZTTH/cwk/others/aibooks_remote/修仙小说项目/fanguwenxian_openclaw/batches/batch01_chunk08a_micro.md)
 16. [batch01_chunk08b_micro.md](/Users/icsoc/ZTTH/cwk/others/aibooks_remote/修仙小说项目/fanguwenxian_openclaw/batches/batch01_chunk08b_micro.md)
 17. [batch01_chunk09a_micro.md](/Users/icsoc/ZTTH/cwk/others/aibooks_remote/修仙小说项目/fanguwenxian_openclaw/batches/batch01_chunk09a_micro.md)
+18. [batch01_chunk09b_micro.md](/Users/icsoc/ZTTH/cwk/others/aibooks_remote/修仙小说项目/fanguwenxian_openclaw/batches/batch01_chunk09b_micro.md)
 
 ## 最新前沿
 
-- 活坡险渡已完成，许临渊主动击落松石，借碎坡把至少一缕白丝卷下坡底
-- 追索首次在地形上吃亏，说明其并非完全无损，也会被险地限制
-- 两人现已抢到东折林影边缘，但后方追索仍在重新绕路
-- 下一步建议：写 `batch01_chunk09b_micro`，进入“东折入林 / 卯前最后急赶 / 青石涧口前的最后一重阻截”
+- 陌客已补出最后一条认路旧规：`借灯归涧，请开半线`
+- 许临渊以药泥气味和抛铲假引抢出空隙，带着陌客成功撞进青石涧口半线
+- 外头白意暂被石间青纹隔住，但许临渊左臂已被擦出一道寒伤
+- 下一步建议：写 `batch01_chunk10a_micro`，进入“涧口内认印 / 更深层旧规落下 / 陌客生死最后裁决”
